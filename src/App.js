@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
-import MainCard from './components/MainCard';
+import TimeframeSelector from './components/MainCard';
 
 function App() {
   return (
     <div className="App">
-      <MainCard />
+      <TimeframeSelector />
     </div>
   );
 }

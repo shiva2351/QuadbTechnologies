@@ -1,11 +1,10 @@
+import React from 'react';
 
+const TimeframeSelector = ({ onSelect }) => (
+  <div>
+    <button onClick={() => onSelect('daily')}>Daily</button>
+    #similarly creating buttons weekly and Monthly
+  </div>
+);
 
-
-const MainCard=()=>{
-     console.log("main")
-    return <div>
-        <input type="search" placeholder="location"  />
-    </div>
-}
-
-export default MainCard
+export default TimeframeSelector;

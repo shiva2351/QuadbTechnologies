@@ -1,9 +1,10 @@
 import React from 'react';
+import ChartCard from '../ChartCard';
 
 const TimeframeSelector = ({ onSelect }) => (
   <div>
     <button onClick={() => onSelect('daily')}>Daily</button>
-    #similarly creating buttons weekly and Monthly
+    <ChartCard/>
   </div>
 );
 

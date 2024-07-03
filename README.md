@@ -1,17 +1,17 @@
-# ProbzAI (frontend project)
+# Todo frontend project  (QuadB Technologies)
 
 
 # Structure 
 
 >components
 
->>MainCard
+>>TaskList
 
 >>>index.css
 
 >>>index.js
 
->>ChartCard
+>>TaskInput
 
 >>>index.css
 
@@ -20,4 +20,4 @@
 
 # Assets
 
-* Recharts
+* Redux

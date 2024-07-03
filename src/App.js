@@ -1,11 +1,11 @@
 
 import './App.css';
-import TimeframeSelector from './components/MainCard';
+import TaskList from './components/TaskList';
 
 function App() {
   return (
     <div className="App">
-      <TimeframeSelector />
+      <TaskList />
     </div>
   );
 }

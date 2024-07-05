@@ -9,6 +9,7 @@ const AddTask = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (task.trim()) {
+      console.log(task)
       dispatch(addTask(task));
       setTask('');
     }

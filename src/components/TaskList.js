@@ -4,7 +4,7 @@ import Task from './Task';
 
 const TaskList = () => {
   const tasks = useSelector((state) => state.tasks);
-
+  console.log(tasks,"tasklist")
   return (
     <ul>
       {tasks.map((task) => (

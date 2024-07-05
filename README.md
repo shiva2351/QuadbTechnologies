@@ -2,6 +2,7 @@
 
 * we can add and Delete Tasks 
 * Add Task :- Enter Task name in input and Clicking Add Button then Task is add to your Task list.
+* Taskslist is stored in localstorage ("Qtasks").
 
 # Structure 
 

@@ -6,8 +6,8 @@ if (tasks !== null) {
   tasks = JSON.parse(tasks)
 }else{
   
-const r= [{id:Date.now(),text:"dfsda"},{id:343,text:"dfsdfb"}]
-localStorage.setItem("QTasks",JSON.stringify(r))
+//const r= [{id:Date.now(),text:"dfsda"},{id:343,text:"dfsdfb"}]
+localStorage.setItem("QTasks",JSON.stringify([]))
   tasks = JSON.parse(localStorage.getItem("QTasks"))
 }
 
@@ -24,6 +24,10 @@ const taskSlice = createSlice({
       console.log(state,tasks,"t")
     },
     deleteTask: (state, action) => {
+      
+      tasks= tasks.filter(task => task.id !== action.payload)
+
+      localStorage.setItem("QTasks",JSON.stringify(tasks))
       return state.filter(task => task.id !== action.payload);
     },
   },

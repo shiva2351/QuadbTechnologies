@@ -1,12 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-let tasks=localStorage.getItem("QTasks")
+let tasks=localStorage.getItem("QTasks") 
 
 if (tasks !== null) {
   tasks = JSON.parse(tasks)
 }else{
-  const r= [{id:Date.now(),text:"dfsda"},{id:Date.now(),text:"dfsdfb"}]
-  localStorage.setItem("QTasks",JSON.stringify(r)) 
+  
+const r= [{id:Date.now(),text:"dfsda"},{id:343,text:"dfsdfb"}]
+localStorage.setItem("QTasks",JSON.stringify(r))
   tasks = JSON.parse(localStorage.getItem("QTasks"))
 }
 
@@ -16,6 +17,10 @@ const taskSlice = createSlice({
   reducers: {
     addTask: (state, action) => {
       state.push({ id: Date.now(), text: action.payload });
+      tasks=[...tasks,{id: Date.now(), text: action.payload}]
+
+      localStorage.setItem("QTasks",JSON.stringify(tasks))
+
       console.log(state,tasks,"t")
     },
     deleteTask: (state, action) => {
@@ -24,5 +29,6 @@ const taskSlice = createSlice({
   },
 });
 
+console.log(taskSlice,"slice")
 export const { addTask, deleteTask } = taskSlice.actions;
 export default taskSlice.reducer;
